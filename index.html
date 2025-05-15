@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>meme's Complaint Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Grievance Portal, meem 💖</h1>
+    <p>As requested, you can submit your made-up grievances for my viewing pleasure.</p>
+
+    <form name="grievance" method="POST" data-netlify="true" action="/thank-you.html">
+      <input type="hidden" name="form-name" value="grievance" />
+
+      <input type="text" name="title" placeholder="Title" required />
+      <textarea name="message" placeholder="What's bothering you?" required></textarea>
+
+      <label for="mood">Mood:</label>
+      <select name="mood">
+        <option>😡</option>
+        <option>😭</option>
+        <option>😔</option>
+        <option>😤</option>
+        <option>😅</option>
+        <option>💅</option>
+      </select>
+
+      <label for="severity">Severity:</label>
+      <input type="range" name="severity" min="1" max="5" />
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
