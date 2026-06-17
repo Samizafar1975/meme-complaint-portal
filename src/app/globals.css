@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --nixon-maroon: #7a0019;
+  --nixon-maroon-dark: #560011;
+  --nixon-maroon-light: #fbeaee;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-nixon-maroon: var(--nixon-maroon);
+  --color-nixon-maroon-dark: var(--nixon-maroon-dark);
+  --color-nixon-maroon-light: var(--nixon-maroon-light);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

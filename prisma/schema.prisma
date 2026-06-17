@@ -1,0 +1,107 @@
+// Nixon College Enrollment System — database schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum CourseCategory {
+  ENRICHMENT
+  HEADSTART
+  SPORTS
+}
+
+enum DayOfWeek {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+model User {
+  id          String    @id @default(cuid())
+  email       String    @unique
+  name        String
+  studentId   String?   @unique
+  role        Role      @default(STUDENT)
+  active      Boolean   @default(true)
+  submittedAt DateTime? // non-null once the student has locked in their schedule
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  enrollments  Enrollment[]
+  coursesMade  Course[]     @relation("CourseCreatedBy")
+  auditEntries AuditLog[]
+}
+
+model Course {
+  id          String         @id @default(cuid())
+  name        String
+  category    CourseCategory
+  description String
+  createdById String
+  createdBy   User           @relation("CourseCreatedBy", fields: [createdById], references: [id])
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  sessions    CourseSession[]
+  enrollments Enrollment[]
+}
+
+model CourseSession {
+  id           String    @id @default(cuid())
+  courseId     String
+  course       Course    @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  dayOfWeek    DayOfWeek
+  startMinute  Int // minutes since midnight, e.g. 10:00 -> 600
+  endMinute    Int
+  type         String? // informational only, e.g. "Practical", "Theory"
+
+  @@index([courseId])
+}
+
+model Enrollment {
+  id        String   @id @default(cuid())
+  studentId String
+  student   User     @relation(fields: [studentId], references: [id])
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([studentId, courseId])
+  @@index([studentId])
+  @@index([courseId])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String
+  actor      User     @relation(fields: [actorId], references: [id])
+  action     String
+  entityType String
+  entityId   String
+  before     Json?
+  after      Json?
+  createdAt  DateTime @default(now())
+
+  @@index([entityType, entityId])
+}
+
+model SystemSettings {
+  id              Int     @id @default(1)
+  enrollmentOpen  Boolean @default(true)
+  updatedAt       DateTime @updatedAt
+}
