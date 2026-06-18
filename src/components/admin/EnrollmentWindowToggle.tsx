@@ -28,7 +28,7 @@ export function EnrollmentWindowToggle() {
   if (open === null) return null;
 
   return (
-    <div className="rounded-lg border border-nixon-maroon/20 p-4 flex items-center justify-between">
+    <div className="rounded-lg border border-nixor-maroon/20 p-4 flex items-center justify-between">
       <div>
         <h2 className="font-semibold">Enrollment Window</h2>
         <p className="text-sm text-gray-600">
@@ -39,7 +39,7 @@ export function EnrollmentWindowToggle() {
         onClick={toggle}
         disabled={busy}
         className={`rounded-md px-4 py-2 text-sm font-medium text-white disabled:opacity-50 ${
-          open ? "bg-gray-700 hover:bg-gray-800" : "bg-nixon-maroon hover:bg-nixon-maroon-dark"
+          open ? "bg-gray-700 hover:bg-gray-800" : "bg-nixor-maroon hover:bg-nixor-maroon-dark"
         }`}
       >
         {open ? "Close Enrollment" : "Open Enrollment"}

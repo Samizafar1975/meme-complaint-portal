@@ -61,9 +61,9 @@ export function AdminStudents() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-bold text-nixon-maroon">Students</h1>
+      <h1 className="text-xl font-bold text-nixor-maroon">Students</h1>
 
-      <div className="rounded-lg border border-nixon-maroon/20 p-4">
+      <div className="rounded-lg border border-nixor-maroon/20 p-4">
         <h2 className="font-semibold mb-1">Import Roster</h2>
         <p className="text-sm text-gray-600 mb-3">
           CSV with columns: <code>name,email,studentId</code>. Re-importing updates existing

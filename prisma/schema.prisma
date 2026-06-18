@@ -1,4 +1,4 @@
-// Nixon College Enrollment System — database schema
+// Nixor College Enrollment System — database schema
 
 generator client {
   provider = "prisma-client"

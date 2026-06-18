@@ -131,7 +131,7 @@ export function StudentHome() {
       <div className="md:col-span-2 space-y-8">
         {grouped.map(({ category, courses }) => (
           <section key={category}>
-            <h2 className="mb-3 text-lg font-bold text-nixon-maroon">
+            <h2 className="mb-3 text-lg font-bold text-nixor-maroon">
               {CATEGORY_LABELS[category]}
             </h2>
             <div className="space-y-3">
@@ -156,7 +156,7 @@ export function StudentHome() {
                       className={`shrink-0 rounded-md px-3 py-1.5 text-sm font-medium ${
                         inBasket
                           ? "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                          : "bg-nixon-maroon text-white hover:bg-nixon-maroon-dark"
+                          : "bg-nixor-maroon text-white hover:bg-nixor-maroon-dark"
                       } disabled:opacity-50`}
                     >
                       {inBasket ? "Remove" : "Add to basket"}
@@ -170,8 +170,8 @@ export function StudentHome() {
       </div>
 
       <aside className="md:col-span-1">
-        <div className="sticky top-4 rounded-lg border border-nixon-maroon/20 p-4">
-          <h2 className="font-bold text-nixon-maroon mb-3">Your Basket</h2>
+        <div className="sticky top-4 rounded-lg border border-nixor-maroon/20 p-4">
+          <h2 className="font-bold text-nixor-maroon mb-3">Your Basket</h2>
           {basket.length === 0 && (
             <p className="text-sm text-gray-500">No courses added yet.</p>
           )}
@@ -198,7 +198,7 @@ export function StudentHome() {
           <button
             onClick={submit}
             disabled={submitting || hasAnyConflict}
-            className="w-full rounded-md bg-nixon-maroon px-4 py-2 font-medium text-white hover:bg-nixon-maroon-dark disabled:opacity-50"
+            className="w-full rounded-md bg-nixor-maroon px-4 py-2 font-medium text-white hover:bg-nixor-maroon-dark disabled:opacity-50"
           >
             {submitting ? "Submitting…" : "Submit Schedule"}
           </button>

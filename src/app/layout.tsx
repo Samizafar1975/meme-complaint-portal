@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nixon College Enrollment",
-  description: "Course enrollment portal for Nixon College",
+  title: "Nixor College Enrollment",
+  description: "Course enrollment portal for Nixor College",
 };
 
 export default function RootLayout({

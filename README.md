@@ -1,6 +1,6 @@
-# Nixon College Enrollment Portal
+# Nixor College Enrollment Portal
 
-Course enrollment system for Nixon College: students browse Enrichment,
+Course enrollment system for Nixor College: students browse Enrichment,
 Headstart, and Sports courses, build a basket, get live clash detection,
 and submit a locked schedule once. Admins manage courses, import the
 student roster, and control the enrollment window. Super Admins manage

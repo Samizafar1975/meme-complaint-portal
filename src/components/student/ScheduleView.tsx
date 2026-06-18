@@ -39,7 +39,7 @@ export function ScheduleView() {
       <div>
         <p className="text-gray-600">
           You haven&apos;t submitted a schedule yet.{" "}
-          <Link href="/" className="text-nixon-maroon underline">
+          <Link href="/" className="text-nixor-maroon underline">
             Go build your basket
           </Link>
           .
@@ -50,7 +50,7 @@ export function ScheduleView() {
 
   return (
     <div>
-      <h1 className="text-xl font-bold text-nixon-maroon mb-1">My Schedule</h1>
+      <h1 className="text-xl font-bold text-nixor-maroon mb-1">My Schedule</h1>
       <p className="text-sm text-gray-500 mb-6">
         Submitted on {data.submittedAt ? new Date(data.submittedAt).toLocaleString() : ""}. This
         schedule is locked.

@@ -10,10 +10,10 @@ export function NavBar() {
   const role = session.user.role;
 
   return (
-    <header className="bg-nixon-maroon text-white">
+    <header className="bg-nixor-maroon text-white">
       <div className="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between">
         <Link href="/" className="font-bold text-lg tracking-tight">
-          Nixon College &middot; Enrollment
+          Nixor College &middot; Enrollment
         </Link>
         <nav className="flex items-center gap-4 text-sm">
           {role === "STUDENT" && (

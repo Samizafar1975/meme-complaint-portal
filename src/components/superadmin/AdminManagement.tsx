@@ -57,9 +57,9 @@ export function AdminManagement() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-bold text-nixon-maroon">Manage Admins</h1>
+      <h1 className="text-xl font-bold text-nixor-maroon">Manage Admins</h1>
 
-      <form onSubmit={addAdmin} className="rounded-lg border border-nixon-maroon/20 p-4 space-y-3">
+      <form onSubmit={addAdmin} className="rounded-lg border border-nixor-maroon/20 p-4 space-y-3">
         <h2 className="font-semibold">Add or Promote an Admin</h2>
         <div className="grid gap-3 sm:grid-cols-3">
           <input
@@ -89,7 +89,7 @@ export function AdminManagement() {
         {error && <p className="text-sm text-red-600">{error}</p>}
         <button
           type="submit"
-          className="rounded-md bg-nixon-maroon px-4 py-2 text-sm font-medium text-white hover:bg-nixon-maroon-dark"
+          className="rounded-md bg-nixor-maroon px-4 py-2 text-sm font-medium text-white hover:bg-nixor-maroon-dark"
         >
           Save
         </button>

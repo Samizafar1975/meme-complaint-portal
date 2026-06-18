@@ -28,7 +28,7 @@ export function AdminAuditLog() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-bold text-nixon-maroon">Audit Log</h1>
+      <h1 className="text-xl font-bold text-nixor-maroon">Audit Log</h1>
       <table className="w-full text-sm">
         <thead>
           <tr className="text-left text-gray-500 border-b border-gray-200">

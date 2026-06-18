@@ -100,11 +100,11 @@ export function AdminCourses() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-bold text-nixon-maroon">Courses</h1>
+        <h1 className="text-xl font-bold text-nixor-maroon">Courses</h1>
         {!creating && (
           <button
             onClick={() => setCreating(true)}
-            className="rounded-md bg-nixon-maroon px-4 py-2 text-sm font-medium text-white hover:bg-nixon-maroon-dark"
+            className="rounded-md bg-nixor-maroon px-4 py-2 text-sm font-medium text-white hover:bg-nixor-maroon-dark"
           >
             + New Course
           </button>

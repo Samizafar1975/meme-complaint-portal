@@ -64,7 +64,7 @@ export function CourseForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border border-nixon-maroon/20 p-4">
+    <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border border-nixor-maroon/20 p-4">
       <div className="grid gap-3 sm:grid-cols-2">
         <label className="text-sm">
           Name
@@ -160,7 +160,7 @@ export function CourseForm({
         <button
           type="submit"
           disabled={busy}
-          className="rounded-md bg-nixon-maroon px-4 py-2 text-sm font-medium text-white hover:bg-nixon-maroon-dark disabled:opacity-50"
+          className="rounded-md bg-nixor-maroon px-4 py-2 text-sm font-medium text-white hover:bg-nixor-maroon-dark disabled:opacity-50"
         >
           {busy ? "Saving…" : submitLabel}
         </button>

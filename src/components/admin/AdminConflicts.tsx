@@ -26,7 +26,7 @@ export function AdminConflicts() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-bold text-nixon-maroon">Conflicts</h1>
+      <h1 className="text-xl font-bold text-nixor-maroon">Conflicts</h1>
       <p className="text-sm text-gray-600">
         These students submitted a clash-free schedule, but a later course timing change by an
         admin has created a clash. Resolve manually via the Enrollments export.

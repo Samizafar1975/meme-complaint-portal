@@ -29,10 +29,10 @@ export function AdminEnrollments() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-bold text-nixon-maroon">Enrollments</h1>
+        <h1 className="text-xl font-bold text-nixor-maroon">Enrollments</h1>
         <a
           href="/api/admin/enrollments?format=csv"
-          className="rounded-md bg-nixon-maroon px-4 py-2 text-sm font-medium text-white hover:bg-nixon-maroon-dark"
+          className="rounded-md bg-nixor-maroon px-4 py-2 text-sm font-medium text-white hover:bg-nixor-maroon-dark"
         >
           Export CSV
         </a>
