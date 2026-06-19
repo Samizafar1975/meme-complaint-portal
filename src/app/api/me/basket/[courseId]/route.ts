@@ -6,7 +6,7 @@ export async function DELETE(
   { params }: { params: Promise<{ courseId: string }> },
 ) {
   try {
-    const session = await requireRole("STUDENT");
+    const session = await requireRole("STUDENT", "ADMIN", "SUPER_ADMIN");
     const { courseId } = await params;
 
     const user = await prisma.user.findUniqueOrThrow({ where: { id: session.user.id } });

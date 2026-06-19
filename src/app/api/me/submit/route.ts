@@ -6,7 +6,7 @@ import { logAction } from "@/lib/audit";
 
 export async function POST() {
   try {
-    const session = await requireRole("STUDENT");
+    const session = await requireRole("STUDENT", "ADMIN", "SUPER_ADMIN");
 
     const user = await prisma.user.findUniqueOrThrow({ where: { id: session.user.id } });
     if (user.submittedAt) {

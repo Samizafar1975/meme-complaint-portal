@@ -4,7 +4,7 @@ import { courseToDTO } from "@/lib/dto";
 
 export async function GET() {
   try {
-    const session = await requireRole("STUDENT");
+    const session = await requireRole("STUDENT", "ADMIN", "SUPER_ADMIN");
     const user = await prisma.user.findUniqueOrThrow({ where: { id: session.user.id } });
 
     const enrollments = await prisma.enrollment.findMany({

@@ -16,16 +16,12 @@ export function NavBar() {
           Nixor College &middot; Enrollment
         </Link>
         <nav className="flex items-center gap-4 text-sm">
-          {role === "STUDENT" && (
-            <>
-              <Link href="/" className="hover:underline">
-                Courses
-              </Link>
-              <Link href="/schedule" className="hover:underline">
-                My Schedule
-              </Link>
-            </>
-          )}
+          <Link href="/" className="hover:underline">
+            Courses
+          </Link>
+          <Link href="/schedule" className="hover:underline">
+            My Schedule
+          </Link>
           {(role === "ADMIN" || role === "SUPER_ADMIN") && (
             <>
               <Link href="/admin" className="hover:underline">

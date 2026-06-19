@@ -28,7 +28,7 @@ async function loadBasket(studentId: string) {
 
 export async function GET() {
   try {
-    const session = await requireRole("STUDENT");
+    const session = await requireRole("STUDENT", "ADMIN", "SUPER_ADMIN");
     const basket = await loadBasket(session.user.id);
     return Response.json({ basket });
   } catch (error) {
@@ -38,7 +38,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
-    const session = await requireRole("STUDENT");
+    const session = await requireRole("STUDENT", "ADMIN", "SUPER_ADMIN");
 
     const user = await prisma.user.findUniqueOrThrow({ where: { id: session.user.id } });
     if (user.submittedAt) {
